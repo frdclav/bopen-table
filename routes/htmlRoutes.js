@@ -12,6 +12,6 @@ module.exports = function (app) {
     });
 
     app.get("/reserve", function (req, res) {
-        res.sendFile(path.join(__dirname, "reserve.html"));
+        res.sendFile(path.join(__dirname, "reserves.html"));
     });
 }
