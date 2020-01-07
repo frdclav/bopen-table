@@ -31,9 +31,11 @@ var waitlist = [
         "customerID": "waiting_forever"
     }
 ];
+require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app,table,waitlist);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
-  });
+});
