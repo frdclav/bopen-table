@@ -7,6 +7,11 @@ module.exports = function (app, table, waitlist) {// Displays all booked tables
         return res.json(waitlist);
     });
 
+    app.get("/api/clear", function (req, res) {
+        table.length = 0;
+        return res.json(table);
+    });
+
     // Create New Reservation - takes in JSON input
     app.post("/api/tables", function (req, res) {
         // req.body hosts is equal to the JSON post sent from the user
