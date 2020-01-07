@@ -9,6 +9,7 @@ module.exports = function (app, table, waitlist) {// Displays all booked tables
 
     app.get("/api/clear", function (req, res) {
         table.length = 0;
+        console.log('wheee')
         return res.json(table);
     });
 
